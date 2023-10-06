@@ -1,4 +1,2 @@
 #!/usr/bin/python3
-"""
-#pythoniscool
-"""
+exec('print("#pythoniscool")\n')
