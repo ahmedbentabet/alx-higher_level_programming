@@ -2,8 +2,9 @@
 
 """This module defines a class Square that represents a square."""
 
+
 class Square:
-    """A class named Square with a private instance attribute size."""
+    """A Square with a private instance attribute size."""
 
     def __init__(self, size):
         """
