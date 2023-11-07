@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ write string to file """
 
+
 def write_file(filename="", text=""):
     """ writes a string to a text file and returns the num of chars written """
 
