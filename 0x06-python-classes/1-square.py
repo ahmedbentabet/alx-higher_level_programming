@@ -6,8 +6,8 @@ Define the Squire class
 
 class Square:
     """
-    A class used to represent a square
+    A Square with a private instance attribute.
     """
 
-    def __init__(self, __size):
-        self.__size = __size
+    def __init__(self, size):
+        self.__size = size
