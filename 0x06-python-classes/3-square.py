@@ -3,6 +3,7 @@
 
 
 class Square:
+    """A Square with a private instance attribute."""
 
     def __init__(self, size=0):
         """
@@ -17,4 +18,6 @@ class Square:
             raise ValueError("size must be >= 0")
 
     def area(self):
+        """Returns the area of the square."""
+
         return self.__size * self.__size
