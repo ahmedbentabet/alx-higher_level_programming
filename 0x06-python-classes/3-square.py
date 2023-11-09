@@ -3,7 +3,6 @@
 
 
 class Square:
-    """A Square with a private instance attribute."""
 
     def __init__(self, size=0):
         """
