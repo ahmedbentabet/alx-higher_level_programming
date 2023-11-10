@@ -1,53 +1,35 @@
 #!/usr/bin/python3
-"""This module defines a class Square that represents a square."""
+"""Define the Squire class"""
 
 
 class Square:
-    """ A class named Square with a private instance attribute size. """
+    """A Square with a private instance attribute."""
 
     def __init__(self, size=0):
         """
-        Initializes the Square instance.
-
-        Parameters:
-            size (int): The size of the square.
+        Initialize a new Square.
+        Args:
+            size (int): The size of the new square.
         """
-        self.size = size
+        self.__size = size
 
     @property
     def size(self):
-        """
-        Retrieves the size of the square.
+        """Get the size of the square."""
 
-        Returns:
-            int: The size of the square.
-        """
         return self.__size
 
     @size.setter
     def size(self, value):
-        """
-        Sets the size of the square.
+        """Set a new size to the square."""
 
-        Parameters:
-            value (int): The size of the square.
-
-        Raises:
-            TypeError: If value is not an integer.
-            ValueError: If value is less than 0.
-        """
+        self.__size = value
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
 
     def area(self):
-        """
-        Returns the area of the square.
+        """Returns the area of the square."""
 
-        Returns:
-            int: The area of the square (size * size).
-        """
         return self.__size * self.__size
