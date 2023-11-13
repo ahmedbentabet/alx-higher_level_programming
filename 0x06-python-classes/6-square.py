@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""Define the Squire class"""
+"""Define the Square class"""
 
 
 class Square:
     """A Square with a private instance attribute."""
 
     def __init__(self, size=0, position=(0, 0)):
+<<<<<<< HEAD
         """
         Initialize a new Square.
         Args:
@@ -13,6 +14,16 @@ class Square:
         """
         self.size = size
         self.position = position
+=======
+        """Initialize a new Square."""
+
+        self.__size = size
+        if not isinstance(position, tuple) or len(position) != 2 \
+                    or not all(isinstance(i, int) for i in position) \
+                    or position[0] < 0 or position[1] < 0:
+                raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = position
+>>>>>>> 42bd9ea (Fix task 6)
 
     @property
     def size(self):
