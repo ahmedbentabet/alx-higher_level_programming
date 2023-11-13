@@ -6,15 +6,6 @@ class Square:
     """A Square with a private instance attribute."""
 
     def __init__(self, size=0, position=(0, 0)):
-<<<<<<< HEAD
-        """
-        Initialize a new Square.
-        Args:
-            size (int): The size of the new square.
-        """
-        self.size = size
-        self.position = position
-=======
         """Initialize a new Square."""
 
         self.__size = size
@@ -23,7 +14,6 @@ class Square:
                     or position[0] < 0 or position[1] < 0:
                 raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
->>>>>>> 42bd9ea (Fix task 6)
 
     @property
     def size(self):
