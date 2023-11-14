@@ -1,0 +1,12 @@
+# tests/0-add_integer.txt
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(0, 0)
+0
+
+>>> add_integer(4, 5)
+9
+
+>>> add_integer(2.3, 4)
+6
