@@ -11,6 +11,3 @@ def add_integer(a, b=98):
         raise TypeError("b must be an integer")
 
     return int(a) + int(b)
-
-# print(add_integer(float('inf')))
-print(type(float('inf')))
