@@ -10,3 +10,26 @@
 
 >>> add_integer(2.3, 4)
 6
+
+>>> add_integer("hhh")
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+>>> add_integer()
+Traceback (most recent call last):
+	...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+>>> add_integer(10)
+108
+
+>>> add_integer(float('NaN'))
+Traceback (most recent call last):
+	...
+ValueError: cannot convert float NaN to integer
+
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+	...
+OverflowError: cannot convert float infinity to integer
