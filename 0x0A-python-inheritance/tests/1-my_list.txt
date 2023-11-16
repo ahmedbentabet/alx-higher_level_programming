@@ -1,0 +1,21 @@
+>>> MyList = __import__('1-my_list').MyList
+# Test Case 1 : expected case
+>>> my_list_1 = MyList()
+>>> my_list_1.append(5)
+>>> my_list_1.append(2)
+>>> my_list_1.append(8)
+>>> my_list_1.print_sorted()
+[2, 5, 8]
+
+# Test Case 2 : empty list
+>>> my_list_2 = MyList()
+>>> my_list_2.print_sorted()
+[]
+
+# Test Case 3 : 
+>>> my_list_3 = MyList([10, 1, 7, 3])
+>>> my_list_3.print_sorted()
+Traceback (most recent call last):
+    ...
+TypeError: MyList.__init__() takes 1 positional argument but 2 were given
+    
