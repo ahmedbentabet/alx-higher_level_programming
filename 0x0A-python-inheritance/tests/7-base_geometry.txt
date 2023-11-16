@@ -15,3 +15,14 @@ TypeError: BaseGeometry.integer_validator() missing 1 required positional argume
 Traceback (most recent call last):
     ...
 Exception: area() is not implemented
+
+>>> bg = BaseGeometry("hello")
+Traceback (most recent call last):
+    ...
+TypeError: BaseGeometry() takes no arguments
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg.integer_validator("my_int", 42)
+Traceback (most recent call last):
+    ...
+NameError: name 'bg' is not defined
