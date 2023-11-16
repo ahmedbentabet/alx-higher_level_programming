@@ -58,6 +58,27 @@ True
 
 # Test Case 9 :  more than 1 argument
 >>> my_list_9 = MyList([10, 1, 7, 3])
-Traceback (most recent call last):
-    ...
-TypeError: MyList.__init__() takes 1 positional argument but 2 were given
+>>> print(my_list_9)
+[10, 1, 7, 3]
+>>> my_list_9.print_sorted()
+[1, 3, 7, 10]
+
+# Test Case 10 :  string as argument
+>>> my_list_10 = MyList("Ahmed")
+>>> print(my_list_10)
+['A', 'h', 'm', 'e', 'd']
+>>> my_list_10.print_sorted()
+['A', 'd', 'e', 'h', 'm']
+
+# Test Case 11 :  empty list
+>>> my_list_11 = MyList([])
+>>> my_list_11.print_sorted()
+[]
+
+# Test Case 12 :  string as argument
+>>> my_list_12 = MyList([5])
+>>> print(my_list_12)
+[5]
+>>> my_list_12.print_sorted()
+[5]
+
