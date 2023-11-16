@@ -10,18 +10,8 @@ TypeError: BaseGeometry.integer_validator() missing 1 required positional argume
 >>> bg.integer_validator("my_int", 12)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+    ...
+Exception: area() is not implemented
