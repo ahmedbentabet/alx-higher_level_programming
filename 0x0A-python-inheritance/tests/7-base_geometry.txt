@@ -4,7 +4,7 @@
 >>> bg.integer_validator("my_int")
 Traceback (most recent call last):
     ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", 12)
@@ -23,6 +23,3 @@ TypeError: BaseGeometry() takes no arguments
 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg.integer_validator("my_int", 42)
-Traceback (most recent call last):
-    ...
-NameError: name 'bg' is not defined
