@@ -1,9 +1,15 @@
 #!/usr/bin/python3
-"""Define The addition function."""
+"""
+
+Define The addition function.
+
+"""
 
 
 def add_integer(a, b=98):
-    """Add two integers"""
+    """
+    Add two integers
+    """
 
     if type(a) not in [int, float]:
         raise TypeError("a must be an integer")
