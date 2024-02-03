@@ -1,0 +1,39 @@
+# tests/5-text_indentation.txt
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Hi my name is Ahmed. what is your name? absi: oh nice.")
+Hi my name is Ahmed.
+
+what is your name?
+
+absi:
+
+oh nice.
+
+>>> text_indentation("")
+
+
+>>> text_indentation("No punctuation here")
+No punctuation here
+
+>>> text_indentation(15)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+
+>>> text_indentation()
+Traceback (most recent call last):
+	...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> text_indentation("Hi my name is Ahmed. \nwhat is your name? absi: oh nice.")
+Hi my name is Ahmed.
+
+
+what is your name?
+
+absi:
+
+oh nice.
+
