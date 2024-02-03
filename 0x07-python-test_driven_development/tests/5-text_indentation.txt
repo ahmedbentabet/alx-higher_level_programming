@@ -45,3 +45,4 @@ oh nice.
 
 >>> text_indentation("thanks alx")
 thanks alx
+<BLANKLINE>
