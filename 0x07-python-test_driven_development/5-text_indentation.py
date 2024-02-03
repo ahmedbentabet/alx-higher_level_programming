@@ -26,5 +26,4 @@ def text_indentation(text):
             current_line = ""
 
     # Print the remaining text if any
-    if current_line:
-        print(current_line.strip())
+    print(current_line.strip(), end='')
