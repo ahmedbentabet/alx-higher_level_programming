@@ -8,7 +8,23 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    without_dot = text.replace('. ', '.\n\n')
-    without_question = without_dot.replace('? ', '?\n\n')
-    without_colon = without_question.replace(': ', ':\n\n')
-    print(without_colon)
+    # Define the characters to split the text on
+    split_chars = ['.', '?', ':']
+
+    # Initialize an empty line
+    current_line = ""
+
+    # Iterate through each character in the input text
+    for char in text:
+        # Add the character to the current line
+        current_line += char
+
+        # If the character is one of the split characters, print the current line with two new lines
+        if char in split_chars:
+            print(current_line.strip())
+            print()
+            current_line = ""
+
+    # Print the remaining text if any
+    if current_line:
+        print(current_line.strip())

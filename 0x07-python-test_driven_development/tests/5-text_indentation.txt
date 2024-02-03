@@ -16,8 +16,12 @@ oh nice.
 
 >>> text_indentation("No punctuation")
 No punctuation
+
 >>> text_indentation("iam.Ahmed")
-iam.Ahmed
+iam.
+
+Ahmed
+
 >>> text_indentation(15)
 Traceback (most recent call last):
 	...
