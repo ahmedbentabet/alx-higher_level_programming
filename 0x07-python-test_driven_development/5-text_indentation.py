@@ -19,7 +19,7 @@ def text_indentation(text):
         # Add the character to the current line
         current_line += char
 
-        # If the character is one of the split characters, print the current line with two new lines
+        # Print the current line with two new lines
         if char in split_chars:
             print(current_line.strip())
             print()
