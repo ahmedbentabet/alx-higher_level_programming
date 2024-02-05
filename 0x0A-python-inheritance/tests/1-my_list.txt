@@ -1,0 +1,84 @@
+>>> MyList = __import__('1-my_list').MyList
+
+# Test Case 1 : expected case
+>>> my_list_1 = MyList()
+>>> my_list_1.append(5)
+>>> my_list_1.append(2)
+>>> my_list_1.append(8)
+>>> print(my_list_1)
+[5, 2, 8]
+>>> my_list_1.print_sorted()
+[2, 5, 8]
+>>> print(my_list_1)
+[5, 2, 8]
+
+# Test Case 2 : empty list
+>>> my_list_2 = MyList()
+>>> print(my_list_2)
+[]
+>>> my_list_2.print_sorted()
+[]
+
+# Test Case 3 : expected case
+>>> my_list_3 = MyList()
+>>> my_list_3.append(-5)
+>>> my_list_3.append(-2)
+>>> my_list_3.append(-8)
+>>> print(my_list_3)
+[-5, -2, -8]
+>>> my_list_3.print_sorted()
+[-8, -5, -2]
+
+# Test Case 4 : __str__ method
+>>> str([5, 2])
+'[5, 2]'
+
+# Test Case 5 : append()
+>>> my_list_5 = [5, 2]
+>>> my_list_5.append(7)
+>>> print(my_list_5)
+[5, 2, 7]
+
+# Test Case 6 : check instantiation
+>>> my_list_6 = MyList()
+>>> isinstance(my_list_6, MyList)
+True
+
+# Test Case 7 : inheritance
+>>> issubclass(MyList, list)
+True
+
+# Test Case 8 : check print_sorted() with sorted append
+>>> mylist = MyList()
+>>> mylist.append(1)
+>>> mylist.append(2)
+>>> mylist.append(3)
+>>> mylist.print_sorted()
+[1, 2, 3]
+
+# Test Case 9 :  more than 1 argument
+>>> my_list_9 = MyList([10, 1, 7, 3])
+>>> print(my_list_9)
+[10, 1, 7, 3]
+>>> my_list_9.print_sorted()
+[1, 3, 7, 10]
+
+# Test Case 10 :  string as argument
+>>> my_list_10 = MyList("Ahmed")
+>>> print(my_list_10)
+['A', 'h', 'm', 'e', 'd']
+>>> my_list_10.print_sorted()
+['A', 'd', 'e', 'h', 'm']
+
+# Test Case 11 :  empty list
+>>> my_list_11 = MyList([])
+>>> my_list_11.print_sorted()
+[]
+
+# Test Case 12 :  string as argument
+>>> my_list_12 = MyList([5])
+>>> print(my_list_12)
+[5]
+>>> my_list_12.print_sorted()
+[5]
+
