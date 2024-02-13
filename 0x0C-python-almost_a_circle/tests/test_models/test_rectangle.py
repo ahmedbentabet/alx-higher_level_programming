@@ -86,7 +86,7 @@ class TestRectangle(unittest.TestCase):
         expected_result = "[Rectangle] (1) 3/4 - 10/2"
         self.assertEqual(str(r), expected_result)
 
-    def test_update(self):
+    def test_update_with_args(self):
         r = Rectangle(4, 4, 4, 4, 4)
         r.update(5, 5, 5, 5, 5)
 
@@ -95,3 +95,13 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.x, 5)
         self.assertEqual(r.y, 5)
         self.assertEqual(r.id, 5)
+
+    def test_update_with_kwargs(self):
+        r = Rectangle(1, 2, 3, 4, 5)
+        r.update(id=10, width=20, height=30, x=40, y=50)
+
+        self.assertEqual(r.id, 10)
+        self.assertEqual(r.width, 20)
+        self.assertEqual(r.height, 30)
+        self.assertEqual(r.x, 40)
+        self.assertEqual(r.y, 50)
