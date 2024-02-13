@@ -6,7 +6,8 @@ from models.base import Base
 class TestBase(unittest.TestCase):
 
     def setUp(self):
-        Base._Base__nb_objects = 0  # Explicitly reset __nb_objects to 0 before each test
+        # Explicitly reset __nb_objects to 0 before each test
+        Base._Base__nb_objects = 0
 
     def tearDown(self):
         pass
