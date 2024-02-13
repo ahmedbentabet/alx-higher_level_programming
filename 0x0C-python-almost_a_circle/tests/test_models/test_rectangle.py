@@ -73,6 +73,14 @@ class TestRectangle(unittest.TestCase):
             r.display()
             self.assertEqual(mock_stdout.getvalue(), expected_output)
 
+    def test_display_with_offsets(self):
+        r = Rectangle(3, 2, 2, 1)
+        expected_output = "\n  ###\n  ###\n"
+        
+        with patch('sys.stdout', new_callable=StringIO) as mock_stdout:
+            r.display()
+            self.assertEqual(mock_stdout.getvalue(), expected_output)
+
     def test_str_representation(self):
         r = Rectangle(10, 2, 3, 4, 1)
         expected_result = "[Rectangle] (1) 3/4 - 10/2"
