@@ -54,3 +54,11 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.x, 0)
         self.assertEqual(r.y, 0)
         self.assertEqual(r.id, 1)
+
+    def test_area_regular_case(self):
+        r = Rectangle(5, 10)
+        self.assertEqual(r.area(), 50)
+
+    def test_area_square_case(self):
+        r = Rectangle(4, 4)
+        self.assertEqual(r.area(), 16)
