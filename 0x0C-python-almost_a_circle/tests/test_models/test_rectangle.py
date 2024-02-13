@@ -2,6 +2,8 @@
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
+from unittest.mock import patch
+from io import StringIO
 
 
 class TestRectangle(unittest.TestCase):
@@ -62,3 +64,16 @@ class TestRectangle(unittest.TestCase):
     def test_area_square_case(self):
         r = Rectangle(4, 4)
         self.assertEqual(r.area(), 16)
+
+    def test_display(self):
+        r = Rectangle(3, 2)
+        expected_output = "###\n###\n"
+        
+        with patch('sys.stdout', new_callable=StringIO) as mock_stdout:
+            r.display()
+            self.assertEqual(mock_stdout.getvalue(), expected_output)
+
+    def test_str_representation(self):
+        r = Rectangle(10, 2, 3, 4, 1)
+        expected_result = "[Rectangle] (1) 3/4 - 10/2"
+        self.assertEqual(str(r), expected_result)
