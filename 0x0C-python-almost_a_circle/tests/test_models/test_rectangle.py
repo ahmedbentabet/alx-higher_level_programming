@@ -7,7 +7,7 @@ from models.rectangle import Rectangle
 class TestRectangle(unittest.TestCase):
 
     def setUp(self):
-        pass  # Explicitly reset __nb_objects to 0 before each test
+        Base._Base__nb_objects = 0  # Explicitly reset __nb_objects to 0 before each test
 
     def tearDown(self):
         pass
