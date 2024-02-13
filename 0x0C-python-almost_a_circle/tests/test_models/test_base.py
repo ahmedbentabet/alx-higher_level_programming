@@ -7,21 +7,19 @@ class TestBase(unittest.TestCase):
 
     def setUp(self):
         Base._Base__nb_objects = 0  # Explicitly reset __nb_objects to 0 before each test
-        self.b1 = Base()
-        self.b2 = Base()
-        self.b3 = Base()
-        self.b4 = Base(12)
-        self.b5 = Base()
 
     def tearDown(self):
         pass
 
     def test_id(self):
+        self.b1 = Base()
+        self.b2 = Base()
+        self.b3 = Base(12)
+        self.b4 = Base()
         self.assertEqual(self.b1.id, 1)
         self.assertEqual(self.b2.id, 2)
-        self.assertEqual(self.b3.id, 3)
-        self.assertEqual(self.b4.id, 12)
-        self.assertEqual(self.b5.id, 4)
+        self.assertEqual(self.b3.id, 12)
+        self.assertEqual(self.b4.id, 3)
 
 """         self.emp_1.first = 'John'
         self.emp_2.first = 'Jane'
