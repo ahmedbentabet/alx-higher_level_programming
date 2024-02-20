@@ -58,3 +58,21 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(r.height, 30)
         self.assertEqual(r.x, 40)
         self.assertEqual(r.y, 50)
+
+    def test_to_dictionary(self):
+        # Create an instance of the Square class
+        square_instance = Square(id=1, size=10, x=2, y=1)
+
+        # Call the to_dictionary method
+        result_dict = square_instance.to_dictionary()
+
+        # Define the expected dictionary based on the instance attributes
+        expected_dict = {
+            'id': 1,
+            'size': 10,
+            'x': 2,
+            'y': 1
+        }
+
+        # Compare the result with the expected dictionary
+        self.assertDictEqual(result_dict, expected_dict)
