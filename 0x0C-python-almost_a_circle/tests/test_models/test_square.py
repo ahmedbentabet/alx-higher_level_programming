@@ -39,3 +39,22 @@ class TestSquare(unittest.TestCase):
         s = Square(5, 2, 3, 7)
         expected_output = "[Square] (7) 2/3 - 5"
         self.assertEqual(str(s), expected_output)
+
+    def test_update_with_args(self):
+        r = Square(1, 2, 3, 4)
+        r.update(10, 20, 30, 40)
+
+        self.assertEqual(r.id, 10)
+        self.assertEqual(r.size, 20)
+        self.assertEqual(r.x, 30)
+        self.assertEqual(r.y, 40)
+
+    def test_update_with_kwargs(self):
+        r = Square(1, 2, 3, 4)
+        r.update(id=10, width=20, height=30, x=40, y=50)
+
+        self.assertEqual(r.id, 10)
+        self.assertEqual(r.width, 20)
+        self.assertEqual(r.height, 30)
+        self.assertEqual(r.x, 40)
+        self.assertEqual(r.y, 50)
