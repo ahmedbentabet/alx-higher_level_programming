@@ -115,3 +115,21 @@ class TestBase(unittest.TestCase):
         with open(file_name, 'r') as file:
             content = json.load(file)
             self.assertEqual(content, [])
+
+    def test_from_json_string_empty(self):
+        """Test if from_json_string returns an empty list for empty input."""
+        result = Base.from_json_string("")
+        self.assertEqual(result, [])
+
+    def test_from_json_string_none(self):
+        """Test if from_json_string returns an empty list for None input."""
+        result = Base.from_json_string(None)
+        self.assertEqual(result, [])
+
+    def test_from_json_string_valid_json(self):
+        """Test if from_json_string returns the correct list for a valid JSON string."""
+        json_string = '[{"id": 1, "name": "med"}, {"id": 2, "name": "Jane"}]'
+        expected_result = [{'id': 1, 'name': 'med'}, {'id': 2, 'name': 'Jane'}]
+        
+        result = Base.from_json_string(json_string)
+        self.assertEqual(result, expected_result)

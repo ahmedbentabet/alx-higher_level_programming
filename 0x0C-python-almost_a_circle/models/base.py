@@ -29,6 +29,17 @@ class Base:
             json_str = cls.to_json_string(list_dictionaries)
             file.write(json_str)
 
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the list of the JSON string representation json_string."""
+        if json_string is None or len(json_string) == 0:
+            python_list = []
+        else:
+            # Parse the JSON string to a Python object
+            python_list = json.loads(json_string)
+
+        return python_list
+
     def __init__(self, id=None):
         if id is None:
             Base.__nb_objects += 1
