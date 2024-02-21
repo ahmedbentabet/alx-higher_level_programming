@@ -60,12 +60,13 @@ class Base:
         filename = f"{cls.__name__}.json"
         try:
             with open(filename, 'r') as file:
-                list_of_dict = json.load(file)
+                json_data = file.read()
+                list_of_dict = cls.from_json_string(json_data)
         except FileNotFoundError:
             # If the file doesn't exist, return an empty list
             return []
 
-        # Use from_json_string and create methods to convert dictionaries to instances
+        # Use from_json_string and create methods to convert dicts to instances
         list_instances = [cls.create(**dict) for dict in list_of_dict]
         return list_instances
 
