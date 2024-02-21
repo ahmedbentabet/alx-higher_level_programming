@@ -68,7 +68,7 @@ class TestRectangle(unittest.TestCase):
     def test_display(self):
         r = Rectangle(3, 2)
         expected_output = "###\n###\n"
-        
+
         with patch('sys.stdout', new_callable=StringIO) as mock_stdout:
             r.display()
             self.assertEqual(mock_stdout.getvalue(), expected_output)
@@ -76,7 +76,7 @@ class TestRectangle(unittest.TestCase):
     def test_display_with_offsets(self):
         r = Rectangle(3, 2, 2, 1)
         expected_output = "\n  ###\n  ###\n"
-        
+
         with patch('sys.stdout', new_callable=StringIO) as mock_stdout:
             r.display()
             self.assertEqual(mock_stdout.getvalue(), expected_output)
