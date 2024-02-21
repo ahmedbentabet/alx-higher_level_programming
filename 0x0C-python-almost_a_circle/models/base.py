@@ -47,8 +47,12 @@ class Base:
     def create(cls, **dictionary):
         """returns an instance with all attributes already set."""
 
-        # Create a dummy instance with mandatory attributes
-        dummy_instance = cls(1, 1)
+        # Check if 'size' is a key in the dictionary, indicating it's a Square
+        if 'size' in dictionary:
+            dummy_instance = cls(size=1)  # for a Square
+        else:
+            dummy_instance = cls(width=1, height=1)  # for a Rectangle
+
         # Use the update method to apply real values from dictionary
         dummy_instance.update(**dictionary)
 
