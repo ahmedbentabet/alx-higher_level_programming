@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+Script to connect to a MySQL database and retrieve a list of states.
+
+Usage: ./script.py <username> <password> <database>
+"""
+
 import MySQLdb
 import sys
 
@@ -6,7 +12,6 @@ if __name__ == "__main__":
 
     # Extract MySQL connection parameters from command-line arguments
     username = sys.argv[1]
-    print(username)
     password = sys.argv[2]
     database = sys.argv[3]
 
