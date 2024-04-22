@@ -28,7 +28,7 @@ if __name__ == "__main__":
     cursor = conn.cursor()
 
     # Execute SQL query to select all states  with a name starting with N
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+    cursor.execute("SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY id")
 
     # Fetch all rows from the result set
     rows = cursor.fetchall()
