@@ -31,7 +31,8 @@ if __name__ == "__main__":
 
     # Use a parameterized query to prevent SQL injection
     query = """
-        SELECT * FROM states
+        SELECT *
+        FROM states
         WHERE BINARY name LIKE %s
         ORDER BY id
         """
