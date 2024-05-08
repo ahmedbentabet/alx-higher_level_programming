@@ -30,9 +30,9 @@ if __name__ == "__main__":
     cursor = conn.cursor()
 
     # Execute SQL query to select states where name matches the provided arg
-    cursor.execute(
-        """
-        SELECT * FROM states
+    cursor.execute("""
+        SELECT *
+        FROM states
         WHERE BINARY name LIKE '{}'
         ORDER BY id
         """
