@@ -30,7 +30,8 @@ if __name__ == "__main__":
     # Execute SQL query to select all states
     cursor.execute("SELECT * FROM states ORDER BY id")
 
-    # Fetch all rows from the result set
+    # Fetch all rows from the result set.
+    # The fetched rows are returned as a list of tuples
     rows = cursor.fetchall()
 
     # Display the results
