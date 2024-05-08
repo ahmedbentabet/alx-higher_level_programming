@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script to list all states with names starting with 'N' from a MySQL database.
+Script to list all states with names starting with 'N' (upper N)
+from a MySQL database.
 
 Usage: ./1-filter_states.py <username> <password> <database>
 """
@@ -27,9 +28,10 @@ if __name__ == "__main__":
     # Create a cursor object
     cursor = conn.cursor()
 
-    # Execute SQL query to select all states  with a name starting with N
+    # Execute SQL query to select all states with a name starting with upper N
     cursor.execute("""
-    SELECT * FROM states
+    SELECT *
+    FROM states
     WHERE BINARY name LIKE 'N%'
     ORDER BY id
     """)
