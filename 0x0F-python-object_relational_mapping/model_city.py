@@ -4,6 +4,7 @@ from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from model_state import Base, State
 
+
 class City(Base):
     """
     City class that represents a city table in the database.
@@ -11,7 +12,7 @@ class City(Base):
     Attributes:
         id (int): Represents a column of an integer (primary key).
         name (str): Represents a column of a string of 128 characters.
-        state_id (int): Represents a column of an integer (foreign key to states.id).
+        state_id (int): Represents a column of an integer (foreign key).
     """
 
     __tablename__ = 'cities'
