@@ -1,4 +1,4 @@
-#!/workspace/alx/alx-higher_level_programming/0x0F-python-object_relational_mapping/my_venv/bin/python3
+#!/usr/bin/python3
 """
 Script that prints all City objects from the database hbtn_0e_14_usa.
 """
