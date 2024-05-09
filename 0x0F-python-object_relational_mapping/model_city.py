@@ -1,4 +1,4 @@
-#!/workspace/alx/alx-higher_level_programming/0x0F-python-object_relational_mapping/my_venv/bin/python3
+#!/usr/bin/python3
 """Defines the State class and creates Base instance."""
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
