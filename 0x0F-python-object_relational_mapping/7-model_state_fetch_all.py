@@ -20,7 +20,7 @@ if __name__ == "__main__":
     session = Session()
 
     # Query all State objects and sort them by id in ascending order
-    states = session.query(State).orderd_by(State.id).all()
+    states = session.query(State).order_by(State.id).all()
 
     # Print the results
     for state in states:
