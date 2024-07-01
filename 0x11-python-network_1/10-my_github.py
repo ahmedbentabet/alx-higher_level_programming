@@ -16,7 +16,7 @@ if __name__ == "__main__":
     # Send a GET request to the GitHub API with Basic Authentication
     response = requests.get(url, auth=(username, token))
 
-# Parse the JSON response
-json_response = response.json()
-# Print the user id if available, otherwise print None
-print(json_response.get("id"))
+    # Parse the JSON response
+    json_response = response.json()
+    # Print the user id if available, otherwise print None
+    print(json_response.get("id"))
