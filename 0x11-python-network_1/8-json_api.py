@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Sends a POST request to http://0.0.0.0:5000/search_user with a letter as a parameter.
+Sends a POST request to http://0.0.0.0:5000/search_user with a letter
+as a parameter.
 Handles the JSON response and displays the result appropriately.
 """
 
@@ -9,11 +10,11 @@ import sys
 
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
-    
+
     # Get the letter from the command line argument
     if len(sys.argv) > 1:
         q = sys.argv[1]
-    else: 
+    else:
         q = ""
 
     # Prepare the payload for the POST request
